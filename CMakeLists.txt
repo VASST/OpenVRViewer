@@ -1,4 +1,4 @@
-PROJECT( VTK_RENDER_OVRVISION )
+PROJECT( OPENVRVIEWER )
 
 CMAKE_MINIMUM_REQUIRED( VERSION 2.2 )
 
@@ -10,16 +10,16 @@ FIND_PACKAGE( OpenVR REQUIRED )
 FIND_PACKAGE( SDL REQUIRED)
 FIND_PACKAGE(OpenCV REQUIRED)
 
-ADD_EXECUTABLE( vtk_render_ovrvision
+ADD_EXECUTABLE( OpenVRViewer
   main.cpp
 )
 
-target_include_directories( vtk_render_ovrvision
+target_include_directories( OpenVRViewer
 							PRIVATE ${SDL_INCLUDE_DIR} ${OPENVR_INCLUDE_DIRS})
 							
-target_link_libraries( vtk_render_ovrvision
+target_link_libraries( OpenVRViewer
 					OvrvisionPro
-					vtkOpenVR
+					vtkRenderingOpenVR
 					vtkRenderingFreeType
 					vtkIOImage
 					vtkFiltersTexture
